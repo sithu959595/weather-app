@@ -6,6 +6,9 @@ const getWeather=require("./utils/getWeather.js")
 // const getWeather=require(".../weather-app/getWeather")
 
 const app=express()
+
+const port=process.env.PORT || 3000 ;
+
 app.use(express.static(path.join(__dirname,"../public")))
 let views_path=path.join(__dirname,"../templates/views")
 let partials_path=path.join(__dirname,"../templates/partials")
@@ -88,6 +91,6 @@ app.get('*',(req,res)=>{
     });
 })
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("Sever is up and on.")
 })
