@@ -91,6 +91,6 @@ app.get('*',(req,res)=>{
     });
 })
 
-app.listen(PORT,()=>{
+app.listen(port,()=>{
     console.log("Sever is up and on.")
 })
